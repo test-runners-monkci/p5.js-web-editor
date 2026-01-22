@@ -5,7 +5,7 @@ on: [push, pull_request, workflow_dispatch]
 jobs:
   test:
     name: Test and lint code base
-    runs-on: self-hosted
+    runs-on: [self-hosted, 5000-iops]
     steps:
       - uses: actions/checkout@v2
       - name: Use Node.js
